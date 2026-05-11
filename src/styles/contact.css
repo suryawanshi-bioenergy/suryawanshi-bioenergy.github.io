@@ -1,0 +1,118 @@
+/* src/styles/contact.css */
+
+.contact-section {
+    position: relative;
+}
+
+.contact-info-header {
+    margin-bottom: 2.5rem;
+}
+
+.contact-info-header span {
+    color: var(--secondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.contact-info-header h2 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    color: var(--text-primary);
+}
+
+.contact-description {
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 500px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--primary);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.contact-text {
+    flex: 1;
+}
+
+.contact-text h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+.contact-text p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Inquiry Box (Form) */
+.inquiry-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-dim);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-input {
+    width: 100%;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-dim);
+    padding: 1.25rem;
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-input:focus {
+    border-color: var(--primary);
+    background: var(--bg-base);
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.btn-submit {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.btn-whatsapp {
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .inquiry-card {
+        padding: 2rem;
+        margin-top: 3rem;
+    }
+}

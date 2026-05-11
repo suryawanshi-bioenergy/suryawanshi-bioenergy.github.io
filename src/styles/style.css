@@ -1,0 +1,372 @@
+/* Balanced Premium Clean Nature Design System */
+:root {
+    /* Colors - Premium Light Theme (Bio-Emerald) */
+    --bg-base: #f0fdf4; /* Very subtle mint/green tint */
+    --bg-deep: #e2e8f0; /* Soft slate grey for depth */
+    --bg-surface: #ffffff; /* Pure white cards for contrast */
+    --bg-card: rgba(255, 255, 255, 0.95);
+    --bg-glass: rgba(240, 253, 244, 0.85);
+
+    --primary: #059669; /* Professional Emerald Green */
+    --primary-glow: rgba(5, 150, 105, 0.15);
+    --secondary: #d97706; /* Amber/Gold Accent */
+
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+
+    --border-dim: rgba(0, 0, 0, 0.08);
+
+    /* Scaled Typography */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Spatial Balance (Refined) */
+    --section-padding: 4rem;
+    --container-width: 1200px;
+    --radius-xl: 40px;
+    --radius-lg: 20px;
+    --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+}
+
+h1 {
+    font-size: 3.25rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+/* Layout Utilities */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+
+.section {
+    padding: var(--section-padding) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Alternate backgrounds for clear separation without hard dividers */
+.section:nth-child(even) {
+    background-color: var(--bg-surface);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background: var(--bg-glass);
+    backdrop-filter: blur(25px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-dim);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* Force single line */
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    text-decoration: none;
+    flex-shrink: 0;
+    /* Don't shrink logo */
+    margin-right: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-shrink: 1;
+    /* Allow links to compress slightly */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-cta {
+    flex-shrink: 0;
+    margin-left: 2rem;
+}
+
+/* Hero Section Refined */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(rgba(5, 7, 5, 0.7), rgba(5, 7, 5, 0.8)),
+        url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=2000') center/cover;
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 600px;
+}
+
+/* Depth Layout: Asymmetrical images */
+.grid-depth {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.image-stack {
+    position: relative;
+    padding: 2rem;
+}
+
+.image-stack img {
+    width: 100%;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-dim);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.image-accent {
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+    width: 60%;
+    border-radius: var(--radius-lg);
+    border: 4px solid var(--bg-deep);
+    z-index: 2;
+}
+
+/* Cards & Spatiality */
+.card {
+    background: var(--bg-card);
+    padding: 3.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-dim);
+    transition: var(--transition);
+}
+
+/* Section Decor */
+.section-header span {
+    color: var(--secondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 1.25rem;
+    /* More space to prevent overlap */
+}
+
+/* Buttons */
+.btn {
+    padding: 1rem 2.5rem;
+    border-radius: 100px;
+    font-weight: 700;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #ffffff; /* White text on emerald green */
+    border: none;
+    box-shadow: 0 4px 15px var(--primary-glow);
+}
+.btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-glow);
+    color: var(--primary);
+}
+
+/* Process Flow */
+.process-vertical {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.process-node {
+    position: relative;
+    padding-left: 4rem;
+    padding-bottom: 5rem;
+    border-left: 1px solid var(--border-dim);
+}
+
+.process-node::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 11px;
+    height: 11px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* Animations - Advanced Reveal System */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--delay, 0s);
+    will-change: transform, opacity;
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--delay, 0s);
+    will-change: transform, opacity;
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--delay, 0s);
+    will-change: transform, opacity;
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--delay, 0s);
+    will-change: transform, opacity;
+}
+
+.reveal.visible,
+.reveal-left.visible,
+.reveal-right.visible,
+.reveal-scale.visible {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* Stagger Helpers */
+.stagger-container>* {
+    opacity: 0;
+    /* Hide initially to prevent flickering before JS runs */
+}
+
+@media (max-width: 1024px) {
+    .grid-depth {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    h1 {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .section-padding {
+        padding: 6rem 0;
+    }
+}
