@@ -9,7 +9,7 @@
 }
 
 .contact-info-header span {
-    color: var(--secondary);
+    color: var(--text-secondary); /* Changed from secondary for contrast on cream bg */
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 4px;

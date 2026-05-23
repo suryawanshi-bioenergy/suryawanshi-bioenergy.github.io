@@ -7,7 +7,10 @@ export const renderFooter = () => {
                 <div class="footer-grid">
                     
                     <div class="footer-brand">
-                        <a href="#home" class="logo">SURYAWANSHI <span>BIOENERGY</span></a>
+                        <a href="#home" class="logo" style="display: flex; align-items: center; gap: 10px;">
+                            <img src="./logo.png" alt="Suryawanshi Bioenergy Logo" style="height: 40px; width: auto;" />
+                            <div>SURYAWANSHI <span>BIOENERGY</span></div>
+                        </a>
                         <p>Pioneering the future of clean industrial energy. High-density, carbon-neutral biofuels powering the nation's heaviest industries.</p>
                     </div>
 
@@ -26,9 +29,9 @@ export const renderFooter = () => {
                         <div class="footer-details">
                             <div class="footer-hub-item">
                                 <span>Operations</span>
-                                Jharkhand / Bihar / West Bengal
+                                Madhya Pradesh / Chhattisgarh / Maharashtra
                             </div>
-                            <a href="tel:+917049626295" class="footer-contact">+91-7049626295</a>
+                            <a href="tel:+918358001002" class="footer-contact">+91-8358001002</a>
                         </div>
                     </div>
 

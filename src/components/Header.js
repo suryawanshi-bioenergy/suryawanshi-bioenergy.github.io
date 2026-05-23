@@ -2,7 +2,10 @@ export const renderHeader = () => {
   return `
     <header class="navbar">
       <div class="container">
-        <a href="#home" class="logo">SURYAWANSHI <span>BIOENERGY</span></a>
+        <a href="#home" class="logo" style="display: flex; align-items: center; gap: 10px;">
+          <img src="./logo.png" alt="Suryawanshi Bioenergy Logo" style="height: 40px; width: auto;" />
+          <div>SURYAWANSHI <span>BIOENERGY</span></div>
+        </a>
         <nav>
           <ul class="nav-links">
             <li><a href="#home">Home</a></li>

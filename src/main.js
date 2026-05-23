@@ -7,7 +7,7 @@ import { renderFAQ } from './components/FAQ.js';
 import { renderContact } from './components/Contact.js';
 import { renderFooter } from './components/Footer.js';
 import { initAnimations } from './utils/animations.js';
-import { initNavigation } from './utils/navigation.js';
+import { initNavigation, initProductCarousel, initShowcase } from './utils/navigation.js';
 import { initContactForm } from './utils/contact.js';
 
 // Global Styles
@@ -36,6 +36,8 @@ const initApp = () => {
     // Initialize logic
     initAnimations();
     initNavigation();
+    initProductCarousel();
+    initShowcase();
     initContactForm();
 };
 

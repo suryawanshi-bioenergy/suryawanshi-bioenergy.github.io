@@ -7,9 +7,15 @@ export const renderContact = () => {
           <div class="grid-2">
             
             <div class="contact-info reveal-left">
-                <div class="contact-info-header">
+                <div class="contact-info-header" style="margin-bottom: 30px;">
                     <span>Connect</span>
-                    <h2>Suryawanshi Bioenergy <br/>Get in touch with our team.</h2>
+                    <div style="display: flex; align-items: center; gap: 25px; margin-top: 20px;">
+                        <img src="./logo.png" alt="Suryawanshi Bioenergy Logo" style="height: 120px; width: auto; flex-shrink: 0;" />
+                        <div>
+                            <h2 style="margin: 0; font-size: 2.2rem; color: var(--primary); line-height: 1.1; letter-spacing: -0.5px;">Suryawanshi<br/>Bioenergy</h2>
+                            <p style="margin: 8px 0 0 0; font-size: 1.2rem; font-weight: 500; opacity: 0.9;">Get in touch with our team.</p>
+                        </div>
+                    </div>
                 </div>
                 <p class="contact-description">
                   We’d love to hear from you. Reach out for quotes, bulk orders, 
@@ -24,7 +30,7 @@ export const renderContact = () => {
                         </div>
                         <div class="contact-text">
                           <h4>Email Us</h4>
-                          <p>Suryawanshibioenergies@gmail.com</p>
+                          <p>info@suryawanshibioenergy.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -33,7 +39,7 @@ export const renderContact = () => {
                         </div>
                         <div class="contact-text">
                           <h4>Call Us</h4>
-                          <p>+91-7049626295</p>
+                          <p>+91-8358001002</p>
                         </div>
                     </div>
                 </div>
@@ -51,7 +57,7 @@ export const renderContact = () => {
                         <textarea id="contact-message" placeholder="Your Message" rows="5" class="form-input" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-submit">Send Inquiry</button>
-                    <a href="https://wa.me/917049626295?text=Hello%20Suryawanshi%20Bioenergy,%20I%20am%20interested%20in%20your%20biomass%20pellets%20and%20would%20like%20to%20know%20more." target="_blank" class="btn btn-secondary btn-whatsapp">Chat via WhatsApp</a>
+                    <a href="https://wa.me/918358001002?text=Hello%20Suryawanshi%20Bioenergy,%20I%20am%20interested%20in%20your%20biomass%20pellets%20and%20would%20like%20to%20know%20more." target="_blank" class="btn btn-secondary btn-whatsapp">Chat via WhatsApp</a>
                 </form>
             </div>
 

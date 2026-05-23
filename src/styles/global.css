@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* =========================
+   Base Theme
+========================= */
+
+:root {
+    --bg-primary: #0f1720;
+    --bg-secondary: #17212b;
+
+    --surface: rgba(255, 255, 255, 0.04);
+    --surface-border: rgba(255, 255, 255, 0.08);
+
+    --text-primary: #f5f7f2;
+    --text-secondary: #a6b0a1;
+
+    --accent: #7c9a6d;
+    --accent-light: #a8c39a;
+
+    --warm: #d9c7a2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at top left, rgba(124, 154, 109, 0.08), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(217, 199, 162, 0.05), transparent 30%),
+        var(--bg-primary);
+
+    color: var(--text-primary);
+
+    font-family:
+        Inter,
+        system-ui,
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* =========================
+   Typography
+========================= */
+
+.section-title {
+    @apply text-4xl md:text-6xl font-semibold tracking-tight leading-tight;
+}
+
+.section-subtitle {
+    @apply text-sm uppercase tracking-[0.25em] text-[#a8c39a];
+}
+
+.body-large {
+    @apply text-lg leading-relaxed text-[#a6b0a1];
+}
+
+/* =========================
+   Layout Utilities
+========================= */
+
+.container-premium {
+    @apply max-w-7xl mx-auto px-6 md:px-10;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+    @apply rounded-3xl;
+}
+
+/* =========================
+   Smooth Motion
+========================= */
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hover-lift {
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-6px);
+}
+
+/* =========================
+   Scrollbar
+========================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #101820;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+}
