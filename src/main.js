@@ -23,7 +23,7 @@ const initApp = () => {
             ${renderAbout()}
             ${renderProducts()}
             ${renderProcess()}
-            <section class="section">
+            <section class="section" id="faq">
                 <div class="container">
                     ${renderFAQ()}
                 </div>

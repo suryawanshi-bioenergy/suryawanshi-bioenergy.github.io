@@ -52,6 +52,7 @@ const rawMaterials = [
       "Moisture Content": "≤ 8%",
       "Ash Content": "2–4%",
       "Gross Calorific Value": "4000–4200 kcal/kg",
+      "Bulk Density": "500 to 600 kg/m³",
       "Percentage of Fines (ARB)": "Fines ≤ 5%"
     }
   },
@@ -75,7 +76,7 @@ const rawMaterials = [
       "Moisture Content": "8–12%",
       "Ash Content": "3–8%",
       "Gross Calorific Value": "3500–4200 kcal/kg",
-      "Density": "600–750 kg/m³",
+      "Bulk Density": "600–750 kg/m³",
       "Percentage of Fines (ARB)": "Fines ≤ 5%"
     }
   },
@@ -85,7 +86,7 @@ const rawMaterials = [
     specs: {
       "Gross Calorific Value": "3800–4200 kcal/kg",
       "Ash Content": "4–6%",
-      "Density": "Very High",
+      "Bulk Density": "500 to 600 kg/m³",
       "Percentage of Fines (ARB)": "Fines ≤ 5%"
     }
   },
@@ -93,9 +94,10 @@ const rawMaterials = [
     name: "Mustard Stalk Pellets",
     image: mustardStalkImg,
     specs: {
+      "Pellet Diameter": "6-12 mm",
       "Gross Calorific Value": "3600–4000 kcal/kg",
       "Ash Content": "5–7%",
-      "Density": "High",
+      "Bulk Density": "500 to 600 kg/m³",
       "Percentage of Fines (ARB)": "Fines ≤ 5%"
     }
   },
@@ -105,7 +107,7 @@ const rawMaterials = [
     specs: {
       "Gross Calorific Value": "3800–4200 kcal/kg",
       "Ash Content": "3–5%",
-      "Density": "High",
+      "Bulk Density": "500 to 600 kg/m³",
       "Percentage of Fines (ARB)": "Fines ≤ 5%"
     }
   },
@@ -116,6 +118,7 @@ const rawMaterials = [
       "Gross Calorific Value": "4200–4500 kcal/kg",
       "Ash Content": "2–4%",
       "Grade": "Premium",
+      "Bulk Density": "500 to 600 kg/m³",
       "Percentage of Fines (ARB)": "Fines ≤ 5%"
     }
   },
@@ -123,9 +126,11 @@ const rawMaterials = [
     name: "Sawdust/Wood Pellets",
     image: sawdustImg,
     specs: {
+      "Pellet Diameter": "6-12 mm",
       "Gross Calorific Value": "4200–4800 kcal/kg",
       "Ash Content": "1–3%",
       "Grade": "Export Grade",
+      "Bulk Density": "500 to 600 kg/m³",
       "Percentage of Fines (ARB)": "Fines ≤ 5%"
     }
   },
@@ -136,6 +141,7 @@ const rawMaterials = [
       "Gross Calorific Value": "3000–3600 kcal/kg",
       "Ash Content": "10–15%",
       "Grade": "Moderate",
+      "Bulk Density": "500 to 600 kg/m³",
       "Percentage of Fines (ARB)": "Fines ≤ 5%"
     }
   },
@@ -144,6 +150,7 @@ const rawMaterials = [
     image: cornCobImg,
     specs: {
       "Gross Calorific Value": "4000–4400 kcal/kg",
+      "Bulk Density": "500 to 600 kg/m³",
       "Percentage of Fines (ARB)": "Fines ≤ 5%"
     }
   }
@@ -163,7 +170,8 @@ export const renderProducts = () => {
                 <div class="prod-grid">
                     <div class="prod-content">
                         <div class="prod-badge">${String(index + 1).padStart(2, '0')} / ${String(rawMaterials.length).padStart(2, '0')}</div>
-                        <h3 class="prod-title">${material.name}</h3>
+                        <h3 class="prod-title" style="margin-bottom: 0.5rem;">${material.name}</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; font-weight: 500; margin-top: 0; margin-bottom: 2rem; letter-spacing: 0.5px;">Raw Material: Directly sourced from farmers</p>
                         <div class="prod-spec-grid">
                             ${specItems}
                         </div>
@@ -238,7 +246,8 @@ export const renderProducts = () => {
                         <div class="showcase-slide active" data-index="0">
                             <div class="showcase-grid">
                                 <div class="showcase-content">
-                                    <h4 class="showcase-title"><span class="app-number">01.</span> Heavy Manufacturing & Boilers</h4>
+                                    <h3>1. Heavy Manufacturing & Boilers</h3>
+                                    <p>Power your heavy industrial operations with a sustainable, high-yield thermal solution.</p>
                                     <ul class="app-list">
                                       <li>Uninterrupted base-load fuel for steam generation</li>
                                       <li>Exceptional burn consistency without temperature drops</li>
@@ -255,7 +264,8 @@ export const renderProducts = () => {
                         <div class="showcase-slide" data-index="1">
                             <div class="showcase-grid">
                                 <div class="showcase-content">
-                                    <h4 class="showcase-title"><span class="app-number">02.</span> Large-Scale Commercial Heating</h4>
+                                    <h3>2. Large-Scale Commercial Heating</h3>
+                                    <p>Efficient, low-emission heating solutions for large-scale commercial facilities and corporate spaces.</p>
                                     <ul class="app-list">
                                       <li>Cost-effective climate control for hotels and corporate spaces</li>
                                       <li>Dramatically lowers operational heating overheads</li>
@@ -272,7 +282,8 @@ export const renderProducts = () => {
                         <div class="showcase-slide" data-index="2">
                             <div class="showcase-grid">
                                 <div class="showcase-content">
-                                    <h4 class="showcase-title"><span class="app-number">03.</span> Utility & Power Generation</h4>
+                                    <h3>3. Utility & Power Generation</h3>
+                                    <p>Reliable base-load renewable energy designed for municipal and utility-scale power grids.</p>
                                     <ul class="app-list">
                                       <li>Seamless integration for coal co-firing to meet emission targets</li>
                                       <li>Delivers robust, predictable energy yields for the grid</li>
@@ -289,7 +300,8 @@ export const renderProducts = () => {
                         <div class="showcase-slide" data-index="3">
                             <div class="showcase-grid">
                                 <div class="showcase-content">
-                                    <h4 class="showcase-title"><span class="app-number">04.</span> Food Processing Facilities</h4>
+                                    <h3>4. Food Processing Facilities</h3>
+                                    <p>Clean, consistent thermal energy ideal for strict food-grade processing and dehydration.</p>
                                     <ul class="app-list">
                                       <li>Food-safe, clean-burning thermal energy for industrial ovens</li>
                                       <li>Precision temperature control for roasting and dehydration</li>

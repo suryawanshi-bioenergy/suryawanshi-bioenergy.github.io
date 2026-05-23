@@ -12,6 +12,7 @@ export const renderHeader = () => {
             <li><a href="#about">About</a></li>
             <li><a href="#products">Product</a></li>
             <li><a href="#process">Process</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
